@@ -25,7 +25,7 @@ public class Todo {
 
     }
 
-    public  int getid()
+    public  int getId()
     {
         return id;
 
@@ -54,13 +54,13 @@ public class Todo {
 
     }
 
-    public void userId (int userId)
+    public void setUserId (int userId)
     {
         this.userId = userId;
 
     }
 
-    public  int getuserId()
+    public  int getUserId()
     {
         return userId;
 
