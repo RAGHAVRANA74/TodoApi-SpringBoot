@@ -10,6 +10,14 @@ import java.util.List;
 
 
 @RestController
+@RequestMapping("/api/v1/todos")
+
+
+/*
+@RequestMapping if any request start from particular route like "/api/v1/todos" i am gonna be map it to this .any request to this api i will map to this
+so remove all the todos from the mapping below dont want double double todos
+
+ */
 
 public class TodoController
 {
@@ -22,13 +30,13 @@ public class TodoController
         todoList.add(new Todo (2,true  , "todo 2", 2));
     }
 
- @GetMapping("/todos")
+ @GetMapping("/")
  public ResponseEntity<List<Todo>> getTodos()
  {
      return ResponseEntity.ok(todoList);
  }
 
- @PostMapping("/todos")
+ @PostMapping("/")
     public ResponseEntity<Todo> createTodo(@RequestBody Todo newTodo) {
 
 
@@ -44,7 +52,7 @@ public class TodoController
 
  }
 
- @GetMapping("/todos/{todoid}")
+ @GetMapping("/{todoid}")
     public ResponseEntity<Todo> getTodoById(@PathVariable long todoid)
  {
 
